@@ -19,86 +19,54 @@ class XylophoneApp extends StatelessWidget {
         body: SafeArea(
           child: Column(
             children: <Widget>[
-              Container(
-                width: 150.0,
-                margin: EdgeInsetsDirectional.only(bottom: 10.0),
-                color: Colors.red,
-                child: FlatButton(
-                    onPressed: () {
-                      playNote(1);
-                    },
-                    child: Text('1')),
-              ),
-              Container(
-                width: 150.0,
-                margin: EdgeInsetsDirectional.only(bottom: 10.0),
-                color: Colors.orange,
-                child: FlatButton(
-                    onPressed: () {
-                      playNote(2);
-                    },
-                    child: Text('2')),
-              ),
-              Container(
-                width: 150.0,
-                margin: EdgeInsetsDirectional.only(bottom: 10.0),
-                color: Colors.yellow,
-                child: FlatButton(
-                    onPressed: () {
-                      playNote(3);
-                    },
-                    child: Text('3')),
-              ),
-              Container(
-                width: 150.0,
-                margin: EdgeInsetsDirectional.only(bottom: 10.0),
-                color: Colors.green,
-                child: FlatButton(
-                    onPressed: () {
-                      playNote(4);
-                    },
-                    child: Text('4')),
-              ),
-              Container(
-                width: 150.0,
-                margin: EdgeInsetsDirectional.only(bottom: 10.0),
-                color: Colors.teal,
-                child: FlatButton(
-                    onPressed: () {
-                      playNote(5);
-                    },
-                    child: Text('5')),
-              ),
-              Container(
-                width: 150.0,
-                margin: EdgeInsetsDirectional.only(bottom: 10.0),
-                color: Colors.blue,
-                child: FlatButton(
-                    onPressed: () {
-                      playNote(6);
-                    },
-                    child: Text('6')),
-              ),
-              Container(
-                width: 150.0,
-                margin: EdgeInsetsDirectional.only(bottom: 10.0),
-                color: Colors.pink,
-                child: FlatButton(
-                    onPressed: () {
-                      playNote(7);
-                    },
-                    child: Text('7')),
-              ),
-              Container(
-                width: 150.0,
-                margin: EdgeInsetsDirectional.only(bottom: 10.0),
-                color: Colors.purple,
-                child: FlatButton(
-                    onPressed: () {
-                      playNote(8);
-                    },
-                    child: Text('8')),
-              ),
+              FlatButton(
+                  color: Colors.red,
+                  onPressed: () {
+                    playNote(1);
+                  },
+                  child: Text('1')),
+              FlatButton(
+                  color: Colors.orange,
+                  onPressed: () {
+                    playNote(2);
+                  },
+                  child: Text('2')),
+              FlatButton(
+                  color: Colors.yellow,
+                  onPressed: () {
+                    playNote(3);
+                  },
+                  child: Text('3')),
+              FlatButton(
+                  color: Colors.green,
+                  onPressed: () {
+                    playNote(4);
+                  },
+                  child: Text('4')),
+              FlatButton(
+                  color: Colors.teal,
+                  onPressed: () {
+                    playNote(5);
+                  },
+                  child: Text('5')),
+              FlatButton(
+                  color: Colors.blue,
+                  onPressed: () {
+                    playNote(6);
+                  },
+                  child: Text('6')),
+              FlatButton(
+                  color: Colors.pink,
+                  onPressed: () {
+                    playNote(7);
+                  },
+                  child: Text('7')),
+              FlatButton(
+                  color: Colors.purple,
+                  onPressed: () {
+                    playNote(8);
+                  },
+                  child: Text('8')),
             ],
           ),
         ),
