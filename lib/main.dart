@@ -12,61 +12,34 @@ class XylophoneApp extends StatelessWidget {
     print('$noteNumber');
   }
 
+  Expanded buildKey({Color color, int noteNumber, String noteName}) {
+    return Expanded(
+      child: FlatButton(
+        color: color,
+        onPressed: () {
+          playNote(noteNumber);
+        },
+        child: Text('$noteName'),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              FlatButton(
-                  color: Colors.red,
-                  onPressed: () {
-                    playNote(1);
-                  },
-                  child: Text('1')),
-              FlatButton(
-                  color: Colors.orange,
-                  onPressed: () {
-                    playNote(2);
-                  },
-                  child: Text('2')),
-              FlatButton(
-                  color: Colors.yellow,
-                  onPressed: () {
-                    playNote(3);
-                  },
-                  child: Text('3')),
-              FlatButton(
-                  color: Colors.green,
-                  onPressed: () {
-                    playNote(4);
-                  },
-                  child: Text('4')),
-              FlatButton(
-                  color: Colors.teal,
-                  onPressed: () {
-                    playNote(5);
-                  },
-                  child: Text('5')),
-              FlatButton(
-                  color: Colors.blue,
-                  onPressed: () {
-                    playNote(6);
-                  },
-                  child: Text('6')),
-              FlatButton(
-                  color: Colors.pink,
-                  onPressed: () {
-                    playNote(7);
-                  },
-                  child: Text('7')),
-              FlatButton(
-                  color: Colors.purple,
-                  onPressed: () {
-                    playNote(8);
-                  },
-                  child: Text('8')),
+              buildKey(color: Colors.red, noteNumber: 1, noteName: 'DO'),
+              buildKey(color: Colors.orange, noteNumber: 2, noteName: 'RE'),
+              buildKey(color: Colors.yellow, noteNumber: 3, noteName: 'MI'),
+              buildKey(color: Colors.green, noteNumber: 4, noteName: 'FA'),
+              buildKey(color: Colors.teal, noteNumber: 5, noteName: 'SO'),
+              buildKey(color: Colors.blue, noteNumber: 6, noteName: 'LA'),
+              buildKey(color: Colors.pink, noteNumber: 7, noteName: 'SI'),
+              buildKey(color: Colors.purple, noteNumber: 8, noteName: 'DO'),
             ],
           ),
         ),
